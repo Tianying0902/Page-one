@@ -1,0 +1,137 @@
+/* choose all elements applying style */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* set font */
+body {
+    font-size: 16px;
+font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+.HeroMainly {
+    text-align: center;
+}
+
+/* let nav being center of this page */
+nav {
+    margin: 0 auto;
+    width: 80%;
+/* horizontal align need to distinct block or inline -> use flex*/
+}
+.nav-list {
+display: flex;
+/* align items */
+align-items: center;
+padding: 16px 0;
+}
+/* let li can be more free */
+li {
+    list-style: none;
+}
+.list-item:last-child {
+    margin-left: auto;
+}
+.list-item:first-child {
+    margin-right: 32px;
+}
+.list-item a {
+    padding: 0 8px;
+    text-decoration: none;
+    color:black;
+    white-space: nowrap;
+}
+/* .list-item p { select inner tag with this way
+    寻找这个类名节点中的链接标签
+    color:red;
+} */
+/* no style in every line */
+
+/* style of button */
+.button-primary {
+    appearance: none;
+    border: 1px solid blue;
+    border-radius: 16px;
+    padding: 4px 16px;
+}
+.button-primary:hover {
+   background-color: #E4FBFF;
+}
+/* highlight logo and strong it */
+.logo {
+    font-weight: bold;
+}
+.highlight {
+    color:blue;
+} 
+
+/* ? why my button is not on the same line with other elements? */
+
+/* put brief and media into a horizental part */
+.hero-section {
+    display: flex;
+    width:95%;
+    max-width: 2rem auto;
+    align-items: center;
+}
+/* >表示选中.hero-section的直接孩子节点 直接操作符 不是用的话 会选中内部的所有section 不在乎层次有多深 */
+.hero-section>section {
+    flex: 1;
+}
+.game-cover img {
+    position: relative;
+    width:100%;
+border-radius: 32px;
+}
+.media .title {
+position: relative;
+bottom: 32px;
+left: 32px;
+color: white;
+font-size:14px;
+font-weight: bold;
+}
+.media span.rating {
+    margin: 0 auto;
+}
+.brief p {
+    line-height: 2;
+    font-weight: lighter;
+    text-align: center;
+}
+.button-secondary {
+    background-color: #4a43eb;
+  appearance: none;
+   /* reset default style in the browser */
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+    color:white;
+    /* button不是块状元素，margin:0 auto无效 */
+    display: block;
+    margin: 1rem auto;
+}
+.button-secondary:hover {
+    background-color: #7868E6;
+}
+
+/* menu of heroes */
+.latest-news {
+    margin: 0 1rem;
+}
+.news-container {
+    margin-top: 1rem;
+    display: flex;
+    gap:2rem;
+}
+.news {
+    flex:1;
+}
+.news img{
+width: 100%;
+border-radius: 1rem;
+margin-bottom: 1.5rem;
+}
